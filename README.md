@@ -1,0 +1,2 @@
+# atributos-globais
+ATRIBUTOS GLOBAIS 
