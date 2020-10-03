@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>id</title>
+	<style>
+		#box-1{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+		}
+
+		#box-2{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="box-1"></div>
+	<div id="box-2"></div>
+
+	<script>
+		const box1 = document.getElementById('box-1');
+		console.log(box1);
+
+		const box2 = document.querySelector('#box-2');
+		console.log(box2)
+	</script>
+</body>
+</html>

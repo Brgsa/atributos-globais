@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dropzone</title>
+	
+	<style>
+		.caixa{
+			width: 100px;
+			height: 100px;
+			background: chocolate;
+		}
+
+		.drop{
+			width: 300px;
+			height: 300px;
+			border: 5px solid pink;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<div id="c1" class="caixa" draggable="true"></div>
+	<div id="c2" class="caixa" draggable="true"></div>
+
+
+	<div class="drop" dropzone="copy"></div>
+
+	<script>
+			const caixas = document.querySelectorAll('.caixa');
+			const dropZone = document.querySelector('[dropzone]');
+
+			caixas.forEach(caixaE1 => {
+
+			caixaE1.addEventListener('dragstart', e => {
+				e.dataTransfer.setData('text', e.target.id);
+				console.log(e.target.id)
+			});
+		});
+
+		dropZone.addEventListener('dragover', e => {
+		 
+			e.preventDefault();
+
+
+		 });
+
+		dropZone.addEventListener('drop', e => {
+
+			const id =  e.dataTransfer.getData('text');
+			const element = document.getElementById(id);
+
+			e.target.appendChild(element);
+		  
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+
+
+</body>
+</html>
